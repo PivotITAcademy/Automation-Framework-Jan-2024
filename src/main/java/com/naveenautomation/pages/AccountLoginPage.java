@@ -33,10 +33,11 @@ public class AccountLoginPage extends TestBase {
 		loginBtn.click();
 	}
 
-	public void submitLogin(String email, String pwd) {
+	public MyAccountPage submitLogin(String email, String pwd) {
 		enterEmail(email);
 		enterPwd(pwd);
 		clickLogin();
+		return new MyAccountPage();
 	}
 
 }

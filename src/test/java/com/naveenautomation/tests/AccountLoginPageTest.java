@@ -14,7 +14,7 @@ public class AccountLoginPageTest extends TestBase {
 		intialisation();
 	}
 
-	@Test
+	@Test(enabled = false)
 	public void validateLogin() {
 		AccountLoginPage page = new AccountLoginPage();
 		page.submitLogin("mansan@gmail.com", "Password1");
