@@ -27,7 +27,7 @@ public class MyAccountPageTest extends TestBase {
 		AccountLoginPage page = new AccountLoginPage();
 		myAccountPage=page.submitLogin("mansan@gmail.com", "Password2");
 		String myAccountText=myAccountPage.getMyAccountText();
-		Assert.assertEquals(myAccountText, "My Munni");
+		Assert.assertEquals(myAccountText, "My Account");
 	}
 
 	@Test
@@ -42,7 +42,7 @@ public class MyAccountPageTest extends TestBase {
 
 		String pwdAlertMessage = myAccountPage.getPasswordUpdateAlertText();
 
-		//Asserting whether password change is successfull or not
+		//Asserting whether password change is successfully or not
 		Assert.assertEquals("Success: Your password has been successfully updated.", pwdAlertMessage);
 
 	}
