@@ -5,7 +5,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.naveenautomation.TestBase.TestBase;
-import com.naveenautomation.utility.MyAccountUtils;
 
 public class AddressBookPage extends TestBase {
 

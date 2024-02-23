@@ -27,7 +27,7 @@ public class MyAccountPageTest extends TestBase {
 		AccountLoginPage page = new AccountLoginPage();
 		myAccountPage=page.submitLogin("mansan@gmail.com", "Password2");
 		String myAccountText=myAccountPage.getMyAccountText();
-		Assert.assertEquals(myAccountText, "My Account");
+		Assert.assertEquals(myAccountText, "My Munni Account");
 	}
 
 	@Test
