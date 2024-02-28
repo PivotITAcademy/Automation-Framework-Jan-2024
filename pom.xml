@@ -25,13 +25,13 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.14.3</version>
-			<scope>test</scope>
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>4.16.0</version>
+			<version>3.141.59</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
@@ -40,6 +40,13 @@
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
 			<version>5.6.3</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
 		</dependency>
 
 

@@ -26,6 +26,7 @@ public class ChangePwdPage extends TestBase {
 	}
 	
 	private void enterConfirmPwd(String pwd) {
+		logger.info("entering Password " + pwd);
 		confirmPwd.sendKeys(pwd);
 	}
 
