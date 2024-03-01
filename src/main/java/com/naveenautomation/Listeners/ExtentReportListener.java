@@ -13,6 +13,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Protocol;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
@@ -42,6 +43,7 @@ public class ExtentReportListener extends TestListenerAdapter {
 		htmlReporter.config().setTheme(Theme.DARK);
 		htmlReporter.config().setProtocol(Protocol.HTTPS);
 		htmlReporter.config().setTimeStampFormat(timeStamp);
+		htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
 
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter); // attach extent to htmlrepoter becuase extend builds html reprort
