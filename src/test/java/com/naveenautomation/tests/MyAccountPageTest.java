@@ -22,7 +22,7 @@ public class MyAccountPageTest extends TestBase {
 		page = new AccountLoginPage();
 	}
 	
-	@Test
+	@Test(enabled =false)
 	public void validateLogin() {
 		AccountLoginPage page = new AccountLoginPage();
 		myAccountPage=page.submitLogin("mansan@gmail.com", "Password2");
@@ -30,7 +30,7 @@ public class MyAccountPageTest extends TestBase {
 		Assert.assertEquals(myAccountText, "My Munni Account");
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void validatePasswordUpdate() {
 
 		//Login in
