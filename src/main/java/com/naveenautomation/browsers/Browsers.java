@@ -14,6 +14,7 @@ public enum Browsers {
 		this.browserName=browser;
 	}
 
+	// Method to get the name of the browser
 	public String getBrowserName() {
 		return browserName;
 	}	
