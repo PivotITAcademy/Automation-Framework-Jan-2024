@@ -8,8 +8,8 @@ public enum Browsers {
 	EDGE("Microsoft Edge"),
 	FIREFOX("Mozilla Firefox");
 	
-	public String browserName;
-
+	public String browserName;  //this is browser variable
+ 
 	Browsers(String browser) {
 		this.browserName=browser;
 	}
