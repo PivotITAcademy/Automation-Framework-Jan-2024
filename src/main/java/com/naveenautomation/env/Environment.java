@@ -7,8 +7,8 @@ public enum Environment {
 	
 	
 	
-	DEV("https://naveenautomationlabsdev.com/opencart/index.php?route=account/login"),
-	STAGE("https://naveenautomationlabsstage.com/opencart/index.php?route=account/login"),
+	DEV("https://naveenautomationlabsdev.com/opencart/index.php?route=account/login"),  //url 1
+	STAGE("https://naveenautomationlabsstage.com/opencart/index.php?route=account/login"), //url 2
 	PROD("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
 
 	String envUrl; // string variable for env URL
