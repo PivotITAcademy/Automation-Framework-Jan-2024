@@ -3,7 +3,7 @@ package com.naveenautomation.browsers;
 public enum Browsers {
 
 	// This class represent browser
-
+	//Added this comment
 	CHROME("Google Chrome"), 
 	EDGE("Microsoft Edge"),
 	FIREFOX("Mozilla Firefox"),
@@ -11,7 +11,8 @@ public enum Browsers {
 	ANDROID("Android Browser"), 
 	SAMSUNG("Samsung Browser");//added samsung browser
 
-	public String browserName;
+	
+	public String browserName;  //this is browser variable
 
 	Browsers(String browser) {
 		this.browserName = browser;
