@@ -8,9 +8,13 @@ public enum Browsers {
 	EDGE("Microsoft Edge"),
 	FIREFOX("Mozilla Firefox"),
 	SAFARI("Safari Browser"), 
+<<<<<<< HEAD
 	SAMSUNG("Samsung Browser");
 	
 	
+=======
+	SAMSUNG("Samsung Browser");//added samsung browser
+>>>>>>> branch 'master' of https://github.com/PivotITAcademy/Automation-Framework-Jan-2024.git
 
 	public String browserName; 
 
