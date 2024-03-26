@@ -3,7 +3,7 @@ package com.naveenautomation.browsers;
 public enum Browsers {
 
 	// This class represent browser
-
+	//Added this comment
 	CHROME("Google Chrome"), 
 	EDGE("Microsoft Edge"),
 	FIREFOX("Mozilla Firefox"),
