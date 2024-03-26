@@ -7,7 +7,8 @@ public enum Browsers {
 	CHROME("Google Chrome"),
 	EDGE("Microsoft Edge"),
 	FIREFOX("Mozilla Firefox"),
-	SAMSUNG ("Samsung Browser");
+	SAMSUNG ("Samsung Browser"),
+	ANDROID("Android Browser");
 	
 	public String browserName;
 
