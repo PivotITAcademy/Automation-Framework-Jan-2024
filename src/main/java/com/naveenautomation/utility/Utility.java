@@ -33,7 +33,7 @@ public class Utility extends TestBase {
 		}
 
 	}
-
+// To Generate Random Data
 	public static String generateRandomEmail() {
 		String email = RandomStringUtils.randomNumeric(3);
 		String emailID = "Manvir" + email + "@gmail.com";
