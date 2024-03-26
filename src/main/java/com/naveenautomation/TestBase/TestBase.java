@@ -29,7 +29,7 @@ public class TestBase {
 	private WebDriverEvents events;
 	private EventFiringWebDriver eDriver;
 	
-	@BeforeClass
+	@BeforeClass(enabled=false)
 	public void setUpLogger() {
 		logger = Logger.getLogger(TestBase.class);
 		PropertyConfigurator.configure("log4j.properties");
