@@ -29,7 +29,7 @@ public class TestBase {
 	private WebDriverEvents events;
 	private EventFiringWebDriver eDriver;
 	
-	@BeforeClass(enabled=false)
+	@BeforeClass
 	public void setUpLogger() {
 		logger = Logger.getLogger(TestBase.class);
 		PropertyConfigurator.configure("log4j.properties");
@@ -38,6 +38,7 @@ public class TestBase {
 	}
 
 	public void intialisation() {
+		
 		setBrowserForTesting();
 		driverManagement();
 		logger.info("Loading Page in Browser");
