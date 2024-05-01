@@ -20,6 +20,10 @@ public class AccountLoginPage extends TestBase {
 
 	@FindBy(css = "#content div>div form>input")
 	WebElement loginBtn;
+	
+	//added web element to open PR - checking if i can check to other branch.
+	@FindBy(css = "#account-login li:nth-of-type(3) a")
+	private WebElement loginText;
 
 	private void enterEmail(String email) {
 		loginInput.sendKeys(email);
