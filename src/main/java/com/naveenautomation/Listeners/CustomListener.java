@@ -10,7 +10,7 @@ import com.naveenautomation.utility.Utility;
 public class CustomListener extends TestBase implements ITestListener {
 
 	public void onTestStart(ITestResult result) {
-		System.out.println("Sandeep");
+		System.out.println("SandeepVirk");
 		logger.info("Test Starts : " + result.getMethod().getMethodName());
 	}
 
