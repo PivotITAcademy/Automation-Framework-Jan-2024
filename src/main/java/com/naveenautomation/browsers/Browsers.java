@@ -2,7 +2,7 @@ package com.naveenautomation.browsers;
 
 public enum Browsers {
 
-	// This class represent browser
+	// This class represent different browsers
 
 	CHROME("Google Chrome"), 
 	EDGE("Microsoft Edge"),
