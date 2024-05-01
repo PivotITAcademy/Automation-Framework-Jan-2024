@@ -29,7 +29,7 @@ public class AddAddressPage extends TestBase {
 	WebElement city;
 
 	@FindBy(id = "input-postcode")
-	WebElement postCode;
+	WebElement postalCode;
 
 	@FindBy(id = "input-country")
 	WebElement country;
@@ -60,8 +60,8 @@ public class AddAddressPage extends TestBase {
 		city.sendKeys(name);
 	}
 
-	private void enterPostCode(String name) {
-		postCode.sendKeys(name);
+	private void enterPostalCode(String name) {
+		postalCode.sendKeys(name);
 	}
 
 	private void selectCountry(String name) {
@@ -79,7 +79,7 @@ public class AddAddressPage extends TestBase {
 		enterCompany(company);
 		enterCity(city);
 		enterAddressOne(address);
-		enterPostCode(postalCode);
+		enterPostalCode(postalCode);
 		selectCountry(country);
 		enterZone(zone);
 		continueBtn.click();
