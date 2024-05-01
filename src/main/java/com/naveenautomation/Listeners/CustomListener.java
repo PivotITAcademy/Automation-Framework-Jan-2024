@@ -9,6 +9,7 @@ import com.naveenautomation.utility.Utility;
 
 public class CustomListener extends TestBase implements ITestListener {
 
+	//Vaishnavi
 	public void onTestStart(ITestResult result) {
 		logger.info("Test Starts : " + result.getMethod().getMethodName());
 	}
