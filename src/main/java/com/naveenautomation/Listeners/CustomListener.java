@@ -16,7 +16,7 @@ public class CustomListener extends TestBase implements ITestListener {
 	public void onTestSuccess(ITestResult result) {
 		logger.info("Test Passed : " + result.getMethod().getMethodName());
 	}
-
+//Hamneet Kaur
 	public void onTestFailure(ITestResult result) {
 		logger.info("Test Failed !!!!! Taking Screenshot : " + result.getMethod().getMethodName());
 		Utility.takeFailedTestScreenShot(result.getMethod().getMethodName());
