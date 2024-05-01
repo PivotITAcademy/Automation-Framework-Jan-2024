@@ -8,7 +8,8 @@ public enum Browsers {
 	EDGE("Microsoft Edge"),
 	FIREFOX("Mozilla Firefox"),
 	SAFARI("Safari Browser"), 
-	ANDROID("Android Browser"), 
+	ANDROID("Android Browser"),
+	OPERA("Opera"),//added opera browser
 	SAMSUNG("Samsung Browser");//added samsung browser
 
 	public String browserName;
