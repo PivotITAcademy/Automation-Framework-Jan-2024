@@ -13,7 +13,7 @@ public class AccountLoginPage extends TestBase {
 	}
 
 	@FindBy(id = "input-email")
-	WebElement loginInput;
+	WebElement emailInput;
 
 	@FindBy(id = "input-password")
 	WebElement pwdInput;
@@ -22,7 +22,7 @@ public class AccountLoginPage extends TestBase {
 	WebElement loginBtn;
 
 	private void enterEmail(String email) {
-		loginInput.sendKeys(email);
+		emailInput.sendKeys(email);
 	}
 
 	private void enterPwd(String pwd) {
