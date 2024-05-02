@@ -11,7 +11,7 @@ public class CustomListener extends TestBase implements ITestListener {
 
 	public void onTestStart(ITestResult result) {
 		System.out.println("SandeepVirk");
-		System.out.println("Learning TortoiseGit");
+		System.out.println("Create Pull request using TortoiseGit");
 		logger.info("Test Starts : " + result.getMethod().getMethodName());
 	}
 
