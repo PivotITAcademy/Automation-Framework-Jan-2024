@@ -27,7 +27,7 @@ public class AddressBookPageTest extends TestBase {
 		page = new AccountLoginPage();
 	}
 
-	@Test(enabled=false)
+	@Test(enabled = false)
 	public void validateUserCanAddNewAddress() {
 		myAccountPage = page.submitLogin("mansan@gmail.com", "Password2");
 		addressBookPage = myAccountPage.clickSideNavMenuItem("Address Book");
@@ -37,6 +37,31 @@ public class AddressBookPageTest extends TestBase {
 				Utility.generateRandomString(6), "L6Z3Y6", "Canada", "Ontario");
 		String bannerText = addressBookPage.getBannerText();
 		Assert.assertEquals(bannerText, "Your address has been successfully added");
+	}
+
+	@Test(groups = { "regression" })
+	public void testCase6() {
+		System.out.println("This is test case F");
+	}
+
+	@Test(groups = { "smoke" })
+	public void testCase7() {
+		System.out.println("This is test case G");
+	}
+
+	@Test(groups = { "regression" })
+	public void testCase8() {
+		System.out.println("This is test case H");
+	}
+
+	@Test(groups = { "smoke" })
+	public void testCase9() {
+		System.out.println("This is test case I");
+	}
+
+	@Test(groups = { "smoke" })
+	public void testCase10() {
+		System.out.println("This is test case J");
 	}
 
 	@AfterMethod
