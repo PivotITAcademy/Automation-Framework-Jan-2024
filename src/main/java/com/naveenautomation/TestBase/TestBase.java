@@ -24,7 +24,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestBase {
 
 	public static WebDriver driver;
-	private static Browsers DEFAULT_BROWSER = Browsers.CHROME;
+	String DEFAULT_BROWSER = System.getProperty("BROWSER");
+	//private static Browsers DEFAULT_BROWSER = Browsers.CHROME;
 	private static Environment DEFAULT_ENV=Environment.PROD;
 	public static Logger logger;
 	private WebDriverEvents events;
@@ -53,15 +54,15 @@ public class TestBase {
 
 	private void setBrowserForTesting() {
 		switch (DEFAULT_BROWSER) {
-		case CHROME:
+		case "chrome":
 			logger.info("Launching Chrome Browser");
 			driver = new ChromeDriver();
 			break;
-		case FIREFOX:
+		case "firefox":
 			logger.info("Launching Firefox Browser");
 			driver = new FirefoxDriver();
 			break;
-		case EDGE:
+		case "edge":
 			logger.info("Launching Edge Browser");
 			driver = new EdgeDriver();
 			break;
