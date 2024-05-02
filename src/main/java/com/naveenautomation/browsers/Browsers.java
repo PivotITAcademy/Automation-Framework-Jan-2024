@@ -7,7 +7,7 @@ public enum Browsers {
 	CHROME("Google Chrome"), 
 	EDGE("Microsoft Edge"),
 	FIREFOX("Mozilla Firefox"),
-	SAFARI("Safari Browser"), //safari browser added 
+	SAFARI("Safari Browser"), 
 	ANDROID("Android Browser"), //added android browser
 	SAMSUNG("Samsung Browser");//added samsung browser
 
