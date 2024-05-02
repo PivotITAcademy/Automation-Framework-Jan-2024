@@ -1,5 +1,6 @@
 package com.naveenautomation.TestBase;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.BasicConfigurator;
@@ -23,11 +24,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestBase {
 
 	public static WebDriver driver;
-	private static Browsers DEFAULT_BROWSER = Browsers.EDGE;
+	private static Browsers DEFAULT_BROWSER = Browsers.CHROME;
 	private static Environment DEFAULT_ENV=Environment.PROD;
 	public static Logger logger;
 	private WebDriverEvents events;
 	private EventFiringWebDriver eDriver;
+	  
 	
 	@BeforeClass
 	public void setUpLogger() {
@@ -46,23 +48,20 @@ public class TestBase {
 
 	private void driverManagement() {
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 
 	private void setBrowserForTesting() {
 		switch (DEFAULT_BROWSER) {
 		case CHROME:
-			WebDriverManager.chromedriver().setup();
 			logger.info("Launching Chrome Browser");
 			driver = new ChromeDriver();
 			break;
 		case FIREFOX:
-			WebDriverManager.firefoxdriver().setup();
 			logger.info("Launching Firefox Browser");
 			driver = new FirefoxDriver();
 			break;
 		case EDGE:
-			WebDriverManager.edgedriver().setup();
 			logger.info("Launching Edge Browser");
 			driver = new EdgeDriver();
 			break;
