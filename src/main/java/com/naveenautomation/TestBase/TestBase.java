@@ -83,7 +83,7 @@ public class TestBase {
 	}
 
 	public void tearDown() {
-		driver.close();
+		driver.quit();
 	}
 
 }

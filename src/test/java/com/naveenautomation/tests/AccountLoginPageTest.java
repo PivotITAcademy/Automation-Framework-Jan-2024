@@ -20,8 +20,8 @@ public class AccountLoginPageTest extends TestBase {
 		intialisation();
 	}
 
-	@Test(dataProvider = "LoginData2",enabled = true)
-	public void validateLogin(String username,String password) {
+	@Test(dataProvider = "LoginData2", enabled = true)
+	public void validateLogin(String username, String password) {
 		AccountLoginPage page = new AccountLoginPage();
 		page.submitLogin(username, password);
 	}
@@ -39,17 +39,42 @@ public class AccountLoginPageTest extends TestBase {
 		}
 		return loginData;
 	}
-	
+
 	@DataProvider(name = "LoginData2")
 	private String[][] loginInfoProvider2() throws IOException {
-		
-		String[][] loginData =new String[2][2];
-		
-		loginData[0][0]= "Parul";
-		loginData[0][1]= "Shukla";
-		loginData[1][0]= "Ankit";
-		loginData[1][1]= "Shukla";
+
+		String[][] loginData = new String[2][2];
+
+		loginData[0][0] = "Parul";
+//		loginData[0][1] = "Shukla";
+//		loginData[1][0] = "Ankit";
+//		loginData[1][1] = "Shukla";
 		return loginData;
+	}
+
+	@Test(groups = { "smoke" })
+	public void testCase1() {
+		System.out.println("This is test case A");
+	}
+
+	@Test(groups = { "regression" })
+	public void testCase2() {
+		System.out.println("This is test case B");
+	}
+
+	@Test(groups = { "smoke" })
+	public void testCase3() {
+		System.out.println("This is test case C");
+	}
+
+	@Test(groups = { "Smoke" })
+	public void testCase4() {
+		System.out.println("This is test case D checked with capital S");
+	}
+
+	@Test(groups = { "regression", "smoke" })
+	public void testCase5() {
+		System.out.println("This is test I want to run for both regression and smoke");
 	}
 
 	@AfterMethod

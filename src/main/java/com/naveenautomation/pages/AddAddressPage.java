@@ -73,7 +73,7 @@ public class AddAddressPage extends TestBase {
 	}
 
 	public AddressBookPage SubmitAddress(String name, String lastName, String company, String city, String address,
-			String postalCode, String country, String zone) {
+		String postalCode, String country, String zone) {
 		enterFirstName(name);
 		enterLastName(lastName);
 		enterCompany(company);
