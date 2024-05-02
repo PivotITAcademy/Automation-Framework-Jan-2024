@@ -1,5 +1,6 @@
 package com.naveenautomation.TestBase;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.BasicConfigurator;
@@ -10,7 +11,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.BeforeClass;
 
 import com.naveenautomation.Listeners.WebDriverEvents;
@@ -27,7 +27,6 @@ public class TestBase {
 	private static Environment DEFAULT_ENV=Environment.PROD;
 	public static Logger logger;
 	private WebDriverEvents events;
-	private EventFiringWebDriver eDriver;
 	
 	@BeforeClass
 	public void setUpLogger() {
@@ -46,7 +45,7 @@ public class TestBase {
 
 	private void driverManagement() {
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 
 	private void setBrowserForTesting() {
@@ -71,15 +70,10 @@ public class TestBase {
 			throw new IllegalArgumentException();
 		}
 		
-		//Intialising Event Firing Webdriver
-		eDriver=new EventFiringWebDriver(driver);
 		
 		//Intialising Webdriver Events
 		events=new WebDriverEvents();
 		
-		//Register the event
-		eDriver.register(events);
-		driver=eDriver;
 	}
 
 	public void tearDown() {
