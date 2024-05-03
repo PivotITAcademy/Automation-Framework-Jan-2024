@@ -19,11 +19,16 @@ public class AccountLoginPageTest extends TestBase {
 	public void launchBrowser() {
 		intialisation();
 	}
+	
 
 	@Test(dataProvider = "LoginData2",enabled = true)
 	public void validateLogin(String username,String password) {
 		AccountLoginPage page = new AccountLoginPage();
 		page.submitLogin(username, password);
+	}
+	@Test
+	public void test() {
+		
 	}
 
 	@DataProvider(name = "LoginData")

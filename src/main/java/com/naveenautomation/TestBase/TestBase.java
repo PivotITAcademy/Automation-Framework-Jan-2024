@@ -21,7 +21,7 @@ import com.naveenautomation.env.Environment;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
-
+	String browser = System.getProperty("BROWSER");
 	public static WebDriver driver;
 	private static Browsers DEFAULT_BROWSER = Browsers.EDGE;
 	private static Environment DEFAULT_ENV=Environment.PROD;
@@ -50,18 +50,18 @@ public class TestBase {
 	}
 
 	private void setBrowserForTesting() {
-		switch (DEFAULT_BROWSER) {
-		case CHROME:
+		switch (browser) {
+		case "chrome":
 			WebDriverManager.chromedriver().setup();
 			logger.info("Launching Chrome Browser");
 			driver = new ChromeDriver();
 			break;
-		case FIREFOX:
+		case "firefox":
 			WebDriverManager.firefoxdriver().setup();
 			logger.info("Launching Firefox Browser");
 			driver = new FirefoxDriver();
 			break;
-		case EDGE:
+		case "edge":
 			WebDriverManager.edgedriver().setup();
 			logger.info("Launching Edge Browser");
 			driver = new EdgeDriver();
