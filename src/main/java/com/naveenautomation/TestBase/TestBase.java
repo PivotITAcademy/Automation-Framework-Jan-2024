@@ -1,7 +1,6 @@
 package com.naveenautomation.TestBase;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Level;
@@ -17,9 +16,6 @@ import org.testng.annotations.BeforeClass;
 import com.naveenautomation.Listeners.WebDriverEvents;
 import com.naveenautomation.browsers.Browsers;
 import com.naveenautomation.env.Environment;
-
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 
