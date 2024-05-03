@@ -10,7 +10,7 @@ import com.naveenautomation.utility.Utility;
 public class CustomListener extends TestBase implements ITestListener {
 
 	public void onTestStart(ITestResult result) {
-		//neelam
+        //neelam
 		logger.info("Test Starts : " + result.getMethod().getMethodName());
 	}
 
