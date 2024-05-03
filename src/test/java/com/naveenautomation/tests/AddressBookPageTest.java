@@ -1,8 +1,5 @@
 package com.naveenautomation.tests;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -27,14 +24,14 @@ public class AddressBookPageTest extends TestBase {
 		page = new AccountLoginPage();
 	}
 
-	@Test(enabled=false)
+	@Test(enabled = true)
 	public void validateUserCanAddNewAddress() {
-		myAccountPage = page.submitLogin("mansan@gmail.com", "Password2");
+		myAccountPage = page.submitLogin("harinderk@gmail.com", "Password2");
 		addressBookPage = myAccountPage.clickSideNavMenuItem("Address Book");
 		addAddressPage = addressBookPage.clickNewAddressBtn();
-		addressBookPage = addAddressPage.SubmitAddress(Utility.generateRandomString(10),
-				Utility.generateRandomString(10), Utility.generateRandomString(10), Utility.generateRandomString(8),
-				Utility.generateRandomString(6), "L6Z3Y6", "Canada", "Ontario");
+		addressBookPage = addAddressPage.SubmitAddress(Utility.generateRandomString(2), Utility.generateRandomString(2),
+				Utility.generateRandomString(2), Utility.generateRandomString(8), Utility.generateRandomString(6),
+				"L6Z3Y6", "Canada", "Ontario");
 		String bannerText = addressBookPage.getBannerText();
 		Assert.assertEquals(bannerText, "Your address has been successfully added");
 	}
