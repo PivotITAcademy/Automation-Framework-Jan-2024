@@ -20,7 +20,7 @@ public class AccountLoginPageTest extends TestBase {
 		intialisation();
 	}
 
-	@Test(dataProvider = "LoginData2",enabled = true)
+	@Test(dataProvider = "LoginData2",enabled = true, groups="smoke")
 	public void validateLogin(String username,String password) {
 		AccountLoginPage page = new AccountLoginPage();
 		page.submitLogin(username, password);
