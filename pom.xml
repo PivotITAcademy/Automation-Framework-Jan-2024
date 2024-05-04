@@ -109,13 +109,6 @@
 				<plugin>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.22.1</version>
-					<configuration>
-						<suiteXmlFiles>
-							<suiteXmlFile>
-								C:/Users/gurja/git/Automation-Framework-Jan-2024/testng.xmltestng.xml</suiteXmlFile>
-						</suiteXmlFiles>
-				
-					</configuration>
 
 				</plugin>
 				<plugin>

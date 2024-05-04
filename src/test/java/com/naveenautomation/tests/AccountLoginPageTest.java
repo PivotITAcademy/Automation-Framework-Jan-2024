@@ -29,7 +29,7 @@ public class AccountLoginPageTest extends TestBase {
 	@DataProvider(name = "LoginData")
 	private String[][] loginInfoProvider() throws IOException {
 		System.out.println("Test Pull Request");
-		String filePath = "C:\\Users\\gurja\\OneDrive\\Desktop\\UsernameAndPassword.xlsx";
+		String filePath = "C:\\Users\\gurja\\OneDrive\\Desktop\\PIVOT\\LoginDetails.xlsx";
 		int rowCount = ExcelUtils.getRowCount(filePath, "Sheet2");
 		int colCount = ExcelUtils.getColumnCount(filePath, "Sheet2", rowCount);
 		String[][] loginData = new String[rowCount][colCount];

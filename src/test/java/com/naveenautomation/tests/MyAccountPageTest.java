@@ -30,15 +30,15 @@ public class MyAccountPageTest extends TestBase {
 		Assert.assertEquals(myAccountText, "My Account", "Login Failed!");
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void validatePasswordUpdate() {
 
 		//Login in
-		myAccountPage=page.submitLogin("sandyvirk@gmail.com", "SandyK");
+		myAccountPage=page.submitLogin("sandyvirk@gmail.com", "Sandy");
 		//Updating Password
 		changePwdPage=myAccountPage.clickChangePasswordBtn();
 		//Updating Password
-		myAccountPage=changePwdPage.updatePassword("SandyK", "SandyK");
+		myAccountPage=changePwdPage.updatePassword("Sandy", "Sandy");
 
 		String pwdAlertMessage = myAccountPage.getPasswordUpdateAlertText();
 
