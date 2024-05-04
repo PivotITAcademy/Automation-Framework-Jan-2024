@@ -30,7 +30,7 @@ public class MyAccountPageTest extends TestBase {
 		Assert.assertEquals(myAccountText, "My Munni Account");
 	}
 
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void validatePasswordUpdate() {
 
 		//Login in

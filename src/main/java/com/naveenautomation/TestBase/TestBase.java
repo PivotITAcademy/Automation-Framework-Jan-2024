@@ -23,7 +23,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestBase {
 	String browser = System.getProperty("BROWSER");
 	public static WebDriver driver;
-	private static Browsers DEFAULT_BROWSER = Browsers.EDGE;
+//	private static Browsers DEFAULT_BROWSER = Browsers.EDGE;
 	private static Environment DEFAULT_ENV=Environment.PROD;
 	public static Logger logger;
 	private WebDriverEvents events;
@@ -68,7 +68,7 @@ public class TestBase {
 			break;
 
 		default:
-			throw new IllegalArgumentException();
+			WebDriverManager.chromedriver().setup();
 		}
 		
 		//Intialising Event Firing Webdriver
