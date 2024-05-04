@@ -4,9 +4,9 @@ public enum Browsers {
 
 	// This class represent different browsers
 
-	CHROME("Google Chrome"), 
-	EDGE("Microsoft Edge"),
-	FIREFOX("Mozilla Firefox"),
+	CHROME("chrome"), 
+	EDGE("edge"),
+	FIREFOX("firefox"),
 	SAFARI("Safari Browser"), 
 	OPERA("Opera"),//added opera browser
 	ANDROID("Android Browser"), //added android browser

@@ -1,20 +1,20 @@
 package com.naveenautomation.tests;
 
 import java.io.IOException;
-import java.util.Date;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.naveenautomation.TestBase.TestBase;
-
 import com.naveenautomation.pages.AccountLoginPage;
+import com.naveenautomation.pages.MyAccountPage;
 import com.naveenautomation.utility.ExcelUtils;
 
 public class AccountLoginPageTest extends TestBase {
-
+    MyAccountPage myAccountPage;
 	@BeforeMethod
 	public void launchBrowser() {
 		intialisation();
@@ -23,7 +23,8 @@ public class AccountLoginPageTest extends TestBase {
 	@Test(dataProvider = "LoginData2",enabled = true, groups="smoke")
 	public void validateLogin(String username,String password) {
 		AccountLoginPage page = new AccountLoginPage();
-		page.submitLogin(username, password);
+		myAccountPage=page.submitLogin(username, password);
+		Assert.assertEquals(myAccountPage.getMyAccountText(),"My Account");
 	}
 
 	@DataProvider(name = "LoginData")

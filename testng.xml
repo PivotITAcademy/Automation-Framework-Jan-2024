@@ -12,11 +12,7 @@
 			class-name="com.naveenautomation.Listeners.ExtentReportListener" />
 	</listeners>
 	<test thread-count="5" name="Test">
-		<groups>
-			<run>
-				<include name="smoke" />
-			</run>
-		</groups>
+	
 
 
 		<classes>
