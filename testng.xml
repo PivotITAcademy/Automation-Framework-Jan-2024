@@ -3,11 +3,15 @@
 <suite name="Suite">
 	<listeners>
 
-		<listener class-name="com.naveenautomation.Listeners.CustomListener" />
-		<listener class-name="com.naveenautomation.Listeners.TransformerForRetry" />
-		<listener class-name="com.naveenautomation.Listeners.ExtentReportListener" />
+		<listener
+			class-name="com.naveenautomation.Listeners.CustomListener" />
+		<listener
+			class-name="com.naveenautomation.Listeners.TransformerForRetry" />
+		<listener
+			class-name="com.naveenautomation.Listeners.ExtentReportListener" />
 	</listeners>
 	<test thread-count="5" name="Test">
+
 		<classes>
 			<class name="com.naveenautomation.tests.AccountLoginPageTest" />
 			<class name="com.naveenautomation.tests.MyAccountPageTest" />
