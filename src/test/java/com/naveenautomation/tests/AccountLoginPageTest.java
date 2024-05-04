@@ -1,7 +1,6 @@
 package com.naveenautomation.tests;
 
 import java.io.IOException;
-import java.util.Date;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -9,7 +8,6 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.naveenautomation.TestBase.TestBase;
-
 import com.naveenautomation.pages.AccountLoginPage;
 import com.naveenautomation.utility.ExcelUtils;
 
@@ -28,7 +26,8 @@ public class AccountLoginPageTest extends TestBase {
 
 	@DataProvider(name = "LoginData")
 	private String[][] loginInfoProvider() throws IOException {
-		String filePath = "F:\\Eclipse Workspaces for Pivot\\3rd September Batch\\3rd-September-AutomationFramework\\TestData\\LoginDetails.xlsx";
+		String filePath = "C:\\Users\\Vishnu\\Desktop\\PIVOT\\LoginDetails.xlsx";
+		//String filePath = "F:\\Eclipse Workspaces for Pivot\\3rd September Batch\\3rd-September-AutomationFramework\\TestData\\LoginDetails.xlsx";
 		int rowCount = ExcelUtils.getRowCount(filePath, "Sheet2");
 		int colCount = ExcelUtils.getColumnCount(filePath, "Sheet2", rowCount);
 		String[][] loginData = new String[rowCount][colCount];

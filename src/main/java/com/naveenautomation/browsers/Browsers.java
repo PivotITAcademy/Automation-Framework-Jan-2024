@@ -9,8 +9,7 @@ public enum Browsers {
 	FIREFOX("Mozilla Firefox"),
 	SAFARI("Safari Browser"), 
 	ANDROID("Android Browser"), 
-	SAMSUNG("Samsung Browser");//added samsung browser
-
+	SAMSUNG("Samsung Browser");//added Samsung browser
 	public String browserName;
 
 	Browsers(String browser) {

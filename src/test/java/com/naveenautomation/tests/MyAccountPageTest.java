@@ -22,19 +22,19 @@ public class MyAccountPageTest extends TestBase {
 		page = new AccountLoginPage();
 	}
 	
-	@Test(enabled =false)
+	@Test(enabled =true)
 	public void validateLogin() {
 		AccountLoginPage page = new AccountLoginPage();
-		myAccountPage=page.submitLogin("mansan@gmail.com", "Password2");
+		myAccountPage=page.submitLogin("Jeny.doe@example.com", "Password2");
 		String myAccountText=myAccountPage.getMyAccountText();
-		Assert.assertEquals(myAccountText, "My Munni Account");
+		Assert.assertEquals(myAccountText, "My Account");
 	}
 
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void validatePasswordUpdate() {
 
 		//Login in
-		myAccountPage=page.submitLogin("mansan@gmail.com", "Password2");
+		myAccountPage=page.submitLogin("Jeny.doe@example.com", "Password2");
 		//Updating Password
 		changePwdPage=myAccountPage.clickChangePasswordBtn();
 		//Updating Password

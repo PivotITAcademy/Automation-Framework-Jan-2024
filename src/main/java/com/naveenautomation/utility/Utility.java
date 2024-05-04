@@ -47,7 +47,8 @@ public class Utility extends TestBase {
 
 	public static String generateRandomString(int length) {
 
-		return RandomStringUtils.random(length);
+		String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+		return RandomStringUtils.random(length, characters);
 	}
 
 	public static Date generateRandomDate() {
