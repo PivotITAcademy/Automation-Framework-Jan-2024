@@ -1,4 +1,4 @@
-package com.naveenautomation.tests;
+    package com.naveenautomation.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;

@@ -23,11 +23,11 @@ public class TestBase {
 
 	public static WebDriver driver;
 	private static Browsers DEFAULT_BROWSER = Browsers.CHROME;
-	private static Environment DEFAULT_ENV=Environment.PROD;
+	private static Environment DEFAULT_ENV = Environment.PROD;
 	public static Logger logger;
 	private WebDriverEvents events;
 	private EventFiringWebDriver eDriver;
-	
+
 	@BeforeClass
 	public void setUpLogger() {
 		logger = Logger.getLogger(TestBase.class);
@@ -51,17 +51,16 @@ public class TestBase {
 	private void setBrowserForTesting() {
 		switch (DEFAULT_BROWSER) {
 		case CHROME:
-			WebDriverManager.chromedriver().setup();
+
 			logger.info("Launching Chrome Browser");
 			driver = new ChromeDriver();
 			break;
 		case FIREFOX:
-			WebDriverManager.firefoxdriver().setup();
+
 			logger.info("Launching Firefox Browser");
 			driver = new FirefoxDriver();
 			break;
 		case EDGE:
-			WebDriverManager.edgedriver().setup();
 			logger.info("Launching Edge Browser");
 			driver = new EdgeDriver();
 			break;
@@ -69,16 +68,16 @@ public class TestBase {
 		default:
 			throw new IllegalArgumentException();
 		}
-		
-		//Intialising Event Firing Webdriver
-		eDriver=new EventFiringWebDriver(driver);
-		
-		//Intialising Webdriver Events
-		events=new WebDriverEvents();
-		
-		//Register the event
+
+		// Intialising Event Firing Webdriver
+		eDriver = new EventFiringWebDriver(driver);
+
+		// Intialising Webdriver Events
+		events = new WebDriverEvents();
+
+		// Register the event
 		eDriver.register(events);
-		driver=eDriver;
+		driver = eDriver;
 	}
 
 	public void tearDown() {
