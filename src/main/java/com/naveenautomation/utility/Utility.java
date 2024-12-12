@@ -61,11 +61,13 @@ public class Utility extends TestBase {
 	}
 
 	public static void sleep(int seconds) {
-		try {
-			Thread.sleep(seconds);
-		} catch (InterruptedException e) {
-
-		}
+		
+			try {
+				Thread.sleep(seconds);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		
 	}
 
 }

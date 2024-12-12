@@ -1,7 +1,6 @@
 package com.naveenautomation.TestBase;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Level;
@@ -11,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.BeforeClass;
 
@@ -18,19 +18,15 @@ import com.naveenautomation.Listeners.WebDriverEvents;
 import com.naveenautomation.browsers.Browsers;
 import com.naveenautomation.env.Environment;
 
-
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class TestBase {
 
+	
 	public static WebDriver driver;
 	private static Browsers DEFAULT_BROWSER = Browsers.CHROME;
-	private static Environment DEFAULT_ENV=Environment.PROD;
+	private static Environment DEFAULT_ENV = Environment.PROD;
 	public static Logger logger;
-	private WebDriverEvents events;
-	private EventFiringWebDriver eDriver;
-	  
 	
+
 	@BeforeClass
 	public void setUpLogger() {
 		logger = Logger.getLogger(TestBase.class);
@@ -52,16 +48,18 @@ public class TestBase {
 	}
 
 	private void setBrowserForTesting() {
-		switch (DEFAULT_BROWSER) {
-		case CHROME:
+		//String browser = System.getProperty("Browsers");
+		//switch (browser) {
+		switch (DEFAULT_BROWSER.getBrowserName()) {
+		case "chrome":
 			logger.info("Launching Chrome Browser");
 			driver = new ChromeDriver();
 			break;
-		case FIREFOX:
+		case "firefox":
 			logger.info("Launching Firefox Browser");
 			driver = new FirefoxDriver();
 			break;
-		case EDGE:
+		case "edge":
 			logger.info("Launching Edge Browser");
 			driver = new EdgeDriver();
 			break;
@@ -69,16 +67,7 @@ public class TestBase {
 		default:
 			throw new IllegalArgumentException();
 		}
-		
-		//Intialising Event Firing Webdriver
-		eDriver=new EventFiringWebDriver(driver);
-		
-		//Intialising Webdriver Events
-		events=new WebDriverEvents();
-		
-		//Register the event
-		eDriver.register(events);
-		driver=eDriver;
+
 	}
 
 	public void tearDown() {
